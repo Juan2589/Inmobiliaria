@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GHAC Medellín</title>
+  <link rel="stylesheet" href="estilo.css" />
+</head>
+<body>
+
+  <!-- ENCABEZADO -->
+  <header>
+    <h1>GHAC MEDELLÍN</h1>
+    <nav>
+      <ul>
+        <li><a href="#">Inicio</a></li>
+        <nav>
+  
+  
+</nav>
+
+      </ul>
+    </nav>
+  </header>
+
+  <!-- BANNER -->
+  <section class="banner">
+    <h2>Encuentra la casa de tus sueños</h2>
+    <p>Compra, venta y arriendo de inmuebles en todo el país</p>
+  </section>
+
+  <!-- PROPIEDADES -->
+  <section class="propiedades">
+    <h2>Propiedades Destacadas</h2>
+
+    <div class="carta">
+      <img src="imagenes/areasyfachadas.jpg" alt="Casa Medellín" />
+      <h3>Areas y Fachadas</h3>
+      <p></p>
+      <button onclick="abrirModal('imagenes/areasyfachadas.jpg')">Ver más</button>
+    </div>
+
+    <div class="carta">
+      <img src="imagenes/pisotipicoydistribucion.jpg" alt="Apartamento Bogotá" />
+      <h3>Piso Tipo distribución</h3>
+      <p></p>
+      <button onclick="abrirModal('imagenes/pisotipicoydistribucion.jpg')">Ver más</button>
+    </div>
+
+    <div class="carta">
+      <img src="imagenes/PLANTA TIPICA  26.jpg" alt="Finca Rionegro" />
+      <h3>Planta Típica</h3>
+      <p></p>
+      <button onclick="abrirModal('imagenes/plantatipica.jpg')">Ver más</button>
+    </div>
+  </section>
+
+  <!-- MODAL -->
+  <div id="miModal" class="modal">
+    <span class="cerrar">&times;</span>
+    <img class="modal-contenido" id="imagenAmpliada" src="" alt="Imagen Ampliada">
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2025 GHAC Medellín. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- JS del modal -->
+  <script>
+    const modal = document.getElementById("miModal");
+    const imgAmpliada = document.getElementById("imagenAmpliada");
+    const cerrar = document.querySelector(".cerrar");
+
+    function abrirModal(imagenSrc) {
+      imgAmpliada.src = imagenSrc;
+      modal.style.display = "block";
+    }
+
+    cerrar.onclick = function () {
+      modal.style.display = "none";
+    }
+
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
+<a href="https://w.app/1022144237" class="whatsapp-fijo" target="_blank" title="Contáctanos por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
+</a>
+
+</body>
+</html>
+
+
+
+
+
