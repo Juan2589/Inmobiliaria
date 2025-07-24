@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>GHAC Medellín</title>
   <link rel="stylesheet" href="estilo.css" />
 </head>
+
 <body>
 
   <!-- ENCABEZADO -->
@@ -30,17 +32,21 @@
     <h2>Propiedades Destacadas</h2>
 
     <div class="carta">
-      <img src="imagenes/AREASYFACHADAS.jpg" alt="Casa Medellín" />
-      <h3>Áreas y Fachadas</h3>
-      <button onclick="abrirModal('imagenes/areasyfachadas.jpg')">Ver más</button>
+      <img src="imagenes/costos.jpg" alt="Casa Medellín" />
+      <h3>Plan de Precios</h3>
+      <a href="Pdf/precios.pdf" target="_blank" class="boton">Ver PDF</a>
     </div>
 
-   
+    <div class="carta">
+      <img src="imagenes/AREASYFACHADAS.jpg" alt="Casa Medellín" />
+      <h3>Áreas y Fachadas</h3>
+      <a href="#" onclick="abrirModal('imagenes/areasyfachadas.jpg')" class="boton boton-negro">Ver más</a>
+    </div>
 
     <div class="carta">
       <img src="imagenes/PLANTATIPICA26.jpg" alt="Finca Rionegro" />
       <h3>Planta Típica</h3>
-      <button onclick="abrirModal('imagenes/PLANTATIPICA26.jpg')">Ver más</button>
+      <a href="#" onclick="abrirModal('imagenes/PLANTATIPICA26.jpg')" class="boton boton-negro">Ver más</a>
     </div>
   </section>
 
@@ -79,7 +85,7 @@
 
   <!-- BOTÓN WHATSAPP FIJO -->
   <a href="https://w.app/1022144237" class="whatsapp-fijo" target="_blank" title="Contáctanos por WhatsApp">
-    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp" style="width:50px; position:fixed; bottom:20px; right:20px; z-index:1000;">
+    <img src="https://cdn-icons-png.flaticon.com/512/124/124034.png" alt="WhatsApp">
   </a>
 
 </body>

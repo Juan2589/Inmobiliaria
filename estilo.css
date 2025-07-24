@@ -107,18 +107,37 @@ header nav ul li a:hover {
   margin-bottom: 10px;
 }
 
-.carta button {
-  background-color: #0c0c0c;
-  color: white;
-  border: none;
-  padding: 10px 15px;
-  border-radius: 5px;
+/* BOTONES UNIFORMES */
+.boton {
+  display: inline-block;
+  background: linear-gradient(135deg, #000000, #000000);
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: all 0.3s ease;
   cursor: pointer;
+  width: 100%;
+  max-width: 200px;
   margin-top: 10px;
 }
 
-.carta button:hover {
-  background-color: #060606;
+.boton:hover {
+  background: linear-gradient(135deg, #000000, #000000);
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.boton-negro {
+  background: #0c0c0c;
+}
+
+.boton-negro:hover {
+  background: #060606;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 /* FOOTER */
@@ -160,6 +179,25 @@ footer {
   cursor: pointer;
 }
 
+/* BOTÓN WHATSAPP */
+.whatsapp-fijo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+  background-color: #25D366;
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-fijo img {
+  width: 25px;
+  height: 32px;
+  box-shadow: 1px 1px 10px #00000080;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
   header {
@@ -189,24 +227,10 @@ footer {
     max-width: 95%;
     max-height: 90%;
   }
-}
-.whatsapp-fijo {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  background-color: #25D366;
-  border-radius: 50%;
-  padding: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
 
-.whatsapp-fijo:hover {
-  transform: scale(1.1);
-}
-
-.whatsapp-fijo img {
-  width: 32px;
-  height: 32px;
+  .boton {
+    width: 100%;
+    font-size: 1rem;
+    padding: 14px;
+  }
 }
