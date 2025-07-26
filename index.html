@@ -16,7 +16,7 @@
     <nav>
       <ul>
         <li><a href="#">Inicio</a></li>
-        <li><a href="https://w.app/1022144237" target="_blank">Contacto</a></li>
+        <li><a href="https://w.app/3126614979" target="_blank">Contacto</a></li>
       </ul>
     </nav>
   </header>
@@ -27,27 +27,34 @@
     <p>Compra, venta y arriendo de inmuebles en todo el país</p>
   </section>
 
+  <!-- PROPIEDADES -->
   <section class="propiedades">
-  <h2>Propiedades Destacadas</h2>
+    <h2>Propiedades Destacadas</h2>
 
-  <div class="carta">
-    <img src="imagenes/AREASYFACHADAS.jpg" alt="Casa Medellín" />
-    <h3>Áreas y Fachadas</h3>
-    <a href="#" onclick="abrirModal('imagenes/areasyfachadas.jpg')" class="boton boton-negro">Ver más</a>
-  </div>
+    <div class="carta">
+      <img src="imagenes/AREASYFACHADAS.jpg" alt="Casa Medellín" />
+      <h3>Áreas y Fachadas</h3>
+      <a href="#" onclick="abrirModal('imagenes/AREASYFACHADAS.jpg')" class="boton boton-negro">Ver más</a>
+    </div>
 
-  <div class="carta">
-    <img src="imagenes/PLANTATIPICA26.jpg" alt="Finca Rionegro" />
-    <h3>Planta Típica</h3>
-    <a href="#" onclick="abrirModal('imagenes/PLANTATIPICA26.jpg')" class="boton boton-negro">Ver más</a>
-  </div>
+    <div class="carta">
+      <img src="imagenes/PLANTATIPICA26.jpg" alt="Finca Rionegro" />
+      <h3>Planta Típica</h3>
+      <a href="#" onclick="abrirModal('imagenes/PLANTATIPICA26.jpg')" class="boton boton-negro">Ver más</a>
+    </div>
 
-  <div class="carta">
-    <img src="imagenes/costos.jpg" alt="Casa Medellín" />
-    <h3>Plan de Precios</h3>
-    <a href="Pdf/precios2.pdf" target="_blank" class="boton">Ver PDF</a>
+    <div class="carta">
+      <img src="imagenes/costos.jpg" alt="Casa Medellín" />
+      <h3>Plan de Precios</h3>
+      <a href="Pdf/precios2.pdf" target="_blank" class="boton">Ver PDF</a>
+    </div>
+  </section>
+
+  <!-- MODAL para ver imágenes ampliadas -->
+  <div id="miModal" style="display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto; background-color: rgba(0,0,0,0.8);">
+    <span class="cerrar" onclick="cerrarModal()" style="position: absolute; top: 20px; right: 35px; color: white; font-size: 40px; font-weight: bold; cursor: pointer;">&times;</span>
+    <img id="imagenAmpliada" src="" style="margin: auto; display: block; max-width: 90%; max-height: 80vh; margin-top: 5%;">
   </div>
-</section>
 
   <!-- FOOTER -->
   <footer>
@@ -56,20 +63,19 @@
 
   <!-- JS del modal -->
   <script>
-    const modal = document.getElementById("miModal");
-    const imgAmpliada = document.getElementById("imagenAmpliada");
-    const cerrar = document.querySelector(".cerrar");
-
     function abrirModal(imagenSrc) {
+      const modal = document.getElementById("miModal");
+      const imgAmpliada = document.getElementById("imagenAmpliada");
       imgAmpliada.src = imagenSrc;
       modal.style.display = "block";
     }
 
-    cerrar.onclick = function () {
-      modal.style.display = "none";
+    function cerrarModal() {
+      document.getElementById("miModal").style.display = "none";
     }
 
     window.onclick = function (event) {
+      const modal = document.getElementById("miModal");
       if (event.target == modal) {
         modal.style.display = "none";
       }
@@ -77,9 +83,10 @@
   </script>
 
   <!-- BOTÓN WHATSAPP FIJO -->
-  <a href="https://wa.me/573126614979" class="whatsapp-fijo" target="_blank" title="Contáctanos por WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-  </a>
+ <a href="https://wa.me/573126614979" class="whatsapp-fijo" target="_blank" title="Contáctanos por WhatsApp">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+</a>
+
 
 </body>
 </html>
